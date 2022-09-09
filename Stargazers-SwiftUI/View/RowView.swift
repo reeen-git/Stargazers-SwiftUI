@@ -18,15 +18,14 @@ struct RowView: View {
     }
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 40) {
             Image(uiImage: loadImage(url: result.starIcon))
                 .renderingMode(.original)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 80, height: 80, alignment: .center)
+                .frame(width: 80, height: 80)
                 .border(.gray)
-                .padding()
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 10) {
                 Text(result.jpName)
                     .font(.title2)
                     .fontWeight(.bold)
@@ -35,9 +34,8 @@ struct RowView: View {
                     .font(.footnote)
                     .foregroundColor(Color.red)
             }
-            .padding(.horizontal, 10)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 10)
         .background(.black)
     }
 }
@@ -45,6 +43,5 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         RowView(result: mockData[1])
             .previewLayout(.sizeThatFits)
-            .padding()
     }
 }
