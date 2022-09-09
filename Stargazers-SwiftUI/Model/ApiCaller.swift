@@ -11,7 +11,8 @@ import CoreLocation
 class ApiCaller {
     var latitude = 0.0
     var longitude = 0.0
-    func fetchEventData(completion: @escaping ([Results]) -> Void) {
+    
+    func GetInfo(completion: @escaping ([Results]) -> Void) {
         
         let dt = Date()
         let dateFormatter = DateFormatter()
@@ -23,14 +24,13 @@ class ApiCaller {
         let min = separate[2]
         
         let urlLink = "https://livlog.xyz/hoshimiru/constellation?lat=\(latitude)&lng=\(longitude)&date=\(MonthAndDay)&hour=\(hour)&min=\(min)"
-        print(urlLink)
         URLSession.shared.dataTask(with: URL(string: urlLink)!) { (data, response, error) in
             guard let data = data else { return }
             let decoder: JSONDecoder = JSONDecoder()
             do {
-                let searchedResultData = try decoder.decode(ConstellationInfo.self, from: data)
+                let result = try decoder.decode(Articles.self, from: data)
                 DispatchQueue.main.async {
-                    completion(searchedResultData.information.reversed())
+                    completion(result.result)
                 }
             } catch {
                 print("json convert failed in JSONDecoder. " + error.localizedDescription)

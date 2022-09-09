@@ -12,6 +12,7 @@ struct ConstellationInfo: Decodable {
 }
     let mockData: [Results] = [
     Results(
+        id: "0",
         direction: "西",
         season: "秋",
         jpName: "アンドロメダ座",
@@ -26,6 +27,7 @@ struct ConstellationInfo: Decodable {
     ),
     
     Results(
+        id: "1",
         direction: "南東",
         season: "冬",
         jpName: "いっかくじゅう座",
@@ -40,6 +42,7 @@ struct ConstellationInfo: Decodable {
     ),
     
     Results(
+        id: "2",
         direction: "西南西",
         season: "秋",
         jpName: "うお座",
@@ -54,6 +57,7 @@ struct ConstellationInfo: Decodable {
     ),
     
     Results(
+        id: "3",
         direction: "南南東",
         season: "冬",
         jpName: "うさぎ座",

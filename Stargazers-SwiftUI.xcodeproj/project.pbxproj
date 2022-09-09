@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B72E45028CB0815008514CB /* Stargazers_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E44F28CB0815008514CB /* Stargazers_SwiftUIApp.swift */; };
-		4B72E45228CB0815008514CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E45128CB0815008514CB /* ContentView.swift */; };
+		4B72E45228CB0815008514CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E45128CB0815008514CB /* HomeView.swift */; };
 		4B72E45428CB0817008514CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B72E45328CB0817008514CB /* Assets.xcassets */; };
 		4B72E45728CB0817008514CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B72E45628CB0817008514CB /* Preview Assets.xcassets */; };
 		4B72E46128CB0818008514CB /* Stargazers_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E46028CB0818008514CB /* Stargazers_SwiftUITests.swift */; };
@@ -18,6 +17,10 @@
 		4B72E47F28CB0866008514CB /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E47E28CB0866008514CB /* Articles.swift */; };
 		4B72E48128CB0879008514CB /* ConstellationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48028CB0879008514CB /* ConstellationInfo.swift */; };
 		4B72E48328CB088B008514CB /* locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48228CB088B008514CB /* locations.swift */; };
+		4B72E48528CB0AD4008514CB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48428CB0AD4008514CB /* ListViewModel.swift */; };
+		4B72E48728CB0C5C008514CB /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48628CB0C5C008514CB /* RowView.swift */; };
+		4B72E48D28CB1C7C008514CB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48C28CB1C7C008514CB /* DetailView.swift */; };
+		4B72E49428CB7695008514CB /* Stargazers_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E49328CB7695008514CB /* Stargazers_SwiftUIApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +42,7 @@
 
 /* Begin PBXFileReference section */
 		4B72E44C28CB0815008514CB /* Stargazers-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stargazers-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B72E44F28CB0815008514CB /* Stargazers_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stargazers_SwiftUIApp.swift; sourceTree = "<group>"; };
-		4B72E45128CB0815008514CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B72E45128CB0815008514CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4B72E45328CB0817008514CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B72E45628CB0817008514CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B72E45C28CB0818008514CB /* Stargazers-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stargazers-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,11 @@
 		4B72E47E28CB0866008514CB /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		4B72E48028CB0879008514CB /* ConstellationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationInfo.swift; sourceTree = "<group>"; };
 		4B72E48228CB088B008514CB /* locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locations.swift; sourceTree = "<group>"; };
+		4B72E48428CB0AD4008514CB /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		4B72E48628CB0C5C008514CB /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		4B72E48C28CB1C7C008514CB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4B72E49228CB762E008514CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4B72E49328CB7695008514CB /* Stargazers_SwiftUIApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stargazers_SwiftUIApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +109,11 @@
 		4B72E44E28CB0815008514CB /* Stargazers-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				4B72E49228CB762E008514CB /* Info.plist */,
+				4B72E49328CB7695008514CB /* Stargazers_SwiftUIApp.swift */,
 				4B72E47B28CB083F008514CB /* Model */,
 				4B72E47A28CB083A008514CB /* View */,
 				4B72E47928CB082B008514CB /* ViewModel */,
-				4B72E44F28CB0815008514CB /* Stargazers_SwiftUIApp.swift */,
 				4B72E45328CB0817008514CB /* Assets.xcassets */,
 				4B72E45528CB0817008514CB /* Preview Content */,
 			);
@@ -140,6 +148,7 @@
 		4B72E47928CB082B008514CB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4B72E48428CB0AD4008514CB /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,7 +156,9 @@
 		4B72E47A28CB083A008514CB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B72E45128CB0815008514CB /* ContentView.swift */,
+				4B72E45128CB0815008514CB /* HomeView.swift */,
+				4B72E48628CB0C5C008514CB /* RowView.swift */,
+				4B72E48C28CB1C7C008514CB /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,11 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B72E48128CB0879008514CB /* ConstellationInfo.swift in Sources */,
+				4B72E48D28CB1C7C008514CB /* DetailView.swift in Sources */,
+				4B72E48728CB0C5C008514CB /* RowView.swift in Sources */,
+				4B72E49428CB7695008514CB /* Stargazers_SwiftUIApp.swift in Sources */,
 				4B72E47F28CB0866008514CB /* Articles.swift in Sources */,
-				4B72E45228CB0815008514CB /* ContentView.swift in Sources */,
+				4B72E48528CB0AD4008514CB /* ListViewModel.swift in Sources */,
+				4B72E45228CB0815008514CB /* HomeView.swift in Sources */,
 				4B72E47D28CB0853008514CB /* ApiCaller.swift in Sources */,
 				4B72E48328CB088B008514CB /* locations.swift in Sources */,
-				4B72E45028CB0815008514CB /* Stargazers_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +474,9 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Stargazers-SwiftUI/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "星座情報取得のために位置情報を取得します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "星座情報取得のために位置情報を取得します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -489,7 +505,9 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Stargazers-SwiftUI/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "星座情報取得のために位置情報を取得します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "星座情報取得のために位置情報を取得します";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Articles: Decodable, Identifiable {
-    var id: Int
+struct Articles: Codable {
     let result: [Results]
 }
 
-struct Results: Codable {
+struct Results: Codable, Identifiable {
+    var id: String
     let direction: String
     let season: String
     let jpName: String
@@ -20,17 +20,11 @@ struct Results: Codable {
     let altitude: String
     let origin: String
     let content: String
-
+    
     let altitudeNum: Double
     let directionNum: Double
    
     let starImage: String
-    var starImageURL: URL? {
-        return URL(string: starImage)
-    }
-    
     let starIcon: String
-    var starIconURL: URL? {
-        return URL(string: starIcon)
-    }
+   
 }
