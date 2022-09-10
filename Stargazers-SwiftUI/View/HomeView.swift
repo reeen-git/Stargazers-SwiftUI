@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @ObservedObject private var ListVM = ListViewModel()
     
     init() {
@@ -28,9 +29,7 @@ struct HomeView: View {
                 .listRowBackground(Color.black)
             }
             .navigationTitle("Stargazers")
-            
         }
-    
     }
 }
 

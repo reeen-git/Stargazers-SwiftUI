@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ConstellationInfo: Decodable {
+struct SampleData: Decodable {
     var information: [Results]
 }
     let mockData: [Results] = [

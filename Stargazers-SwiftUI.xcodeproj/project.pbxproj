@@ -15,8 +15,8 @@
 		4B72E46D28CB0818008514CB /* Stargazers_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E46C28CB0818008514CB /* Stargazers_SwiftUIUITestsLaunchTests.swift */; };
 		4B72E47D28CB0853008514CB /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E47C28CB0853008514CB /* ApiCaller.swift */; };
 		4B72E47F28CB0866008514CB /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E47E28CB0866008514CB /* Articles.swift */; };
-		4B72E48128CB0879008514CB /* ConstellationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48028CB0879008514CB /* ConstellationInfo.swift */; };
-		4B72E48328CB088B008514CB /* locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48228CB088B008514CB /* locations.swift */; };
+		4B72E48128CB0879008514CB /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48028CB0879008514CB /* SampleData.swift */; };
+		4B72E48328CB088B008514CB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48228CB088B008514CB /* LocationManager.swift */; };
 		4B72E48528CB0AD4008514CB /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48428CB0AD4008514CB /* ListViewModel.swift */; };
 		4B72E48728CB0C5C008514CB /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48628CB0C5C008514CB /* RowView.swift */; };
 		4B72E48D28CB1C7C008514CB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E48C28CB1C7C008514CB /* DetailView.swift */; };
@@ -52,8 +52,8 @@
 		4B72E46C28CB0818008514CB /* Stargazers_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stargazers_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B72E47C28CB0853008514CB /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		4B72E47E28CB0866008514CB /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
-		4B72E48028CB0879008514CB /* ConstellationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationInfo.swift; sourceTree = "<group>"; };
-		4B72E48228CB088B008514CB /* locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locations.swift; sourceTree = "<group>"; };
+		4B72E48028CB0879008514CB /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		4B72E48228CB088B008514CB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4B72E48428CB0AD4008514CB /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4B72E48628CB0C5C008514CB /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		4B72E48C28CB1C7C008514CB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 			children = (
 				4B72E47C28CB0853008514CB /* ApiCaller.swift */,
 				4B72E47E28CB0866008514CB /* Articles.swift */,
-				4B72E48028CB0879008514CB /* ConstellationInfo.swift */,
-				4B72E48228CB088B008514CB /* locations.swift */,
+				4B72E48028CB0879008514CB /* SampleData.swift */,
+				4B72E48228CB088B008514CB /* LocationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B72E48128CB0879008514CB /* ConstellationInfo.swift in Sources */,
+				4B72E48128CB0879008514CB /* SampleData.swift in Sources */,
 				4B72E48D28CB1C7C008514CB /* DetailView.swift in Sources */,
 				4B72E48728CB0C5C008514CB /* RowView.swift in Sources */,
 				4B72E49428CB7695008514CB /* Stargazers_SwiftUIApp.swift in Sources */,
@@ -312,7 +312,7 @@
 				4B72E48528CB0AD4008514CB /* ListViewModel.swift in Sources */,
 				4B72E45228CB0815008514CB /* HomeView.swift in Sources */,
 				4B72E47D28CB0853008514CB /* ApiCaller.swift in Sources */,
-				4B72E48328CB088B008514CB /* locations.swift in Sources */,
+				4B72E48328CB088B008514CB /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

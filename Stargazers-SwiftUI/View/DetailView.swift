@@ -19,6 +19,7 @@ struct DetailView: View {
         
         NavigationView {
             ZStack {
+                
                 Color.black
                 
             ScrollView {
@@ -28,7 +29,6 @@ struct DetailView: View {
                             Text("/")
                             Text(result.enName)
                         }
-                       
                         .font(.system(size: 20, weight: .bold))
                         .font(.system(.title))
                         .foregroundColor(.red)
@@ -67,7 +67,6 @@ struct DetailView: View {
                                     .foregroundColor(.red)
                             }
                             
-                            
                             VStack(spacing: 10) {
                                 Text(result.content)
                                     .foregroundColor(Color(uiColor: .darkGray))
@@ -87,12 +86,12 @@ struct DetailView: View {
                 }
             .padding(.vertical, 80)
             .padding(.horizontal, 10)
-                
             }
             .ignoresSafeArea()
         }
     }
 }
+
 struct DetailView_Preview: PreviewProvider {
     static var previews: some View {
         DetailView(result: mockData.first)

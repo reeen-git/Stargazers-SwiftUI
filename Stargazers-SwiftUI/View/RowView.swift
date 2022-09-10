@@ -39,6 +39,7 @@ struct RowView: View {
         .background(.black)
     }
 }
+
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         RowView(result: mockData[1])
