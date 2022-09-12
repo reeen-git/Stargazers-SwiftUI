@@ -9,86 +9,51 @@ import SwiftUI
 
 struct DetailView: View {
     var result: Results!
-    func loadImage(url: String) -> UIImage {
-        let imageData = try? Data(contentsOf:URL(string:url)!)
-        let resultImage = UIImage(data:imageData!)?.withRenderingMode(.alwaysOriginal)
-        return resultImage!
-    }
     
     var body: some View {
-        
-        NavigationView {
-            ZStack {
+        ScrollView(.vertical) {
+            VStack(alignment: .center, spacing: 5) {
                 
-                Color.black
+                //Header
+                HeaderImageView(result: result)
                 
-            ScrollView {
-                    VStack {
-                        HStack(spacing: 20) {
-                            Text(result.jpName)
-                            Text("/")
-                            Text(result.enName)
-                        }
-                        .font(.system(size: 20, weight: .bold))
-                        .font(.system(.title))
-                        .foregroundColor(.red)
-                        .padding()
-                        
-                        HStack {
-                            Image(uiImage: loadImage(url: result.starIcon))
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 180, height: 180)
-                                .border(.gray)
-                            Image(uiImage: loadImage(url: result.starImage))
-                                .resizable()
-                                .frame(width: 180, height: 180)
-                                .border(.gray)
-                        }
-                        
-                        VStack(spacing: 10) {
-                            HStack(alignment: .center, spacing: 30) {
-                                Text("今の角度")
-                                    .font(.headline)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.red)
-                                Text(result.directionNum.description)
-                                    .font(.headline)
-                                    .foregroundColor(.red)
-                            }
-                            
-                            HStack(alignment: .center, spacing: 30) {
-                                Text(result.season)
-                                    .font(.headline)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(.red)
-                                Text(result.altitude)
-                                    .font(.headline)
-                                    .foregroundColor(.red)
-                            }
-                            
-                            VStack(spacing: 10) {
-                                Text(result.content)
-                                    .foregroundColor(Color(uiColor: .darkGray))
-                                    .font(.system(size: 15))
-                                    .font(.footnote)
-                                    .border(.secondary)
-
-                                Text(result.origin)
-                                    .foregroundColor(Color(uiColor: .darkGray))
-                                    .font(.system(size: 15))
-                                    .font(.footnote)
-                                    .border(.secondary)
-                            }
-                        }
-                        .padding()
+                VStack(alignment: .center, spacing: 25) {
+                    
+                    //名前
+                    HStack(spacing: 20) {
+                        Text(result.jpName)
+                        Text(result.enName)
                     }
+                    .font(Font.system(.title2).bold())
+                    
+                    //方角・角度を表示する
+                    InformationView(result: result)
+                    
+                    //HeadLine
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("概要")
+                            .font(.system(size: 20, weight: .bold))
+                        Text(result.content)
+                            .font(.system(size: 15, weight: .regular))
+                    }
+                    .font(.footnote)
+                    
+                    //Description
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("起源")
+                            .font(.system(size: 20, weight: .bold))
+                        Text(result.origin)
+                            .font(.system(size: 15, weight: .regular))
+                    }
+                    .font(.footnote)
                 }
-            .padding(.vertical, 80)
-            .padding(.horizontal, 10)
+                .padding(.horizontal, 20)
+                .frame(maxWidth: 640, alignment: .center)
             }
-            .ignoresSafeArea()
+            .foregroundColor(.red)
+            .offset(y: -50)
         }
+        .background(.black)
     }
 }
 

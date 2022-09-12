@@ -19,19 +19,21 @@ struct RowView: View {
     
     var body: some View {
         HStack(spacing: 40) {
+            //星座の写真
             Image(uiImage: loadImage(url: result.starIcon))
                 .renderingMode(.original)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80, height: 80)
-                .border(.gray)
+                .border(Color(uiColor: .darkGray))
+            //cellの文字情報　名前・角度
             VStack(alignment: .leading, spacing: 10) {
                 Text(result.jpName)
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.red)
-                Text(result.direction)
-                    .font(.footnote)
+                Text("方角 : \(result.direction)")
+                    .font(.footnote).bold()
                     .foregroundColor(Color.red)
             }
         }
