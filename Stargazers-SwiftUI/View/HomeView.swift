@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
     
-    @ObservedObject private var ListVM = ListViewModel()
+    @ObservedObject private var apis = LocationManager()
     
     init() {
         UITableView.appearance().backgroundColor = .black
@@ -21,7 +22,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(ListVM.result) { item in
+                ForEach(apis.result) { item in
                     NavigationLink(destination: DetailView(result: item)) {
                         RowView(result: item)
                     }
